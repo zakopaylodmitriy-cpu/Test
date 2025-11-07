@@ -1,0 +1,137 @@
+/* --- Глобальні стилі та скидання --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Світло-сірий фон */
+    color: #202124; /* Темно-сірий текст */
+}
+
+/* --- Шапка (Header) --- */
+header {
+    background: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 a {
+    color: #4285F4; /* Фірмовий синій */
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 1.5rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #5f6368; /* Нейтральний колір посилань */
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: #4285F4;
+}
+
+/* --- Основний вміст (Main) --- */
+main {
+    max-width: 1200px;
+    margin: 2rem auto; /* Центрування контенту */
+    padding: 0 1rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #202124;
+}
+
+/* --- Сітка продуктів --- */
+.product-grid {
+    display: grid;
+    /* Адаптивна сітка: 3 колонки на великих, 1 на малих екранах */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- Картка продукту --- */
+.product-card {
+    background: #ffffff;
+    border: 1px solid #dfe1e5;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Ефект "підняття" */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain; /* Зберігає пропорції, не обрізаючи */
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #202124;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4285F4; /* Синій акцент на ціні */
+    margin-bottom: 1rem;
+}
+
+.product-card .add-to-cart {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .add-to-cart:hover {
+    background-color: #0b57cb; /* Темніший синій при наведенні */
+}
+
+/* --- Підвал (Footer) --- */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+    background: #ffffff;
+    color: #777;
+    border-top: 1px solid #dfe1e5;
+}
